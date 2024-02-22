@@ -72,20 +72,17 @@ let WhoWinner = ()=>{
         gameIsFanish = true
         if (gameIsFanish == true && winner == "X") {
             // how mine winner x
-            let plus =  howMineWinnerX + 1
-            howMineWinnerX = plus
+            howMineWinnerX ++
             x.innerHTML = `X | ${howMineWinnerX}`
 
         }else {
             // how mine winner x
-            let plus =  howMineWinnerO + 1
-            howMineWinnerO = plus
+            howMineWinnerO ++
             o.innerHTML = `O | ${howMineWinnerO}`
         }   
 
-    }
-
-    let isDrow = true
+    }else{
+        let isDrow = true
     for(squar of Array){
         if (squar != "X" && squar != "O") {
             isDrow =false
@@ -97,6 +94,20 @@ let WhoWinner = ()=>{
         alert.innerHTML =  `balanced`
         launch_toast()
     }
+    }
+
+    // let isDrow = true
+    // for(squar of Array){
+    //     if (squar != "X" && squar != "O") {
+    //         isDrow =false
+    //     }
+    // }
+    
+    // if (isDrow) {
+    //     gameIsFanish = true
+    //     alert.innerHTML =  `balanced`
+    //     launch_toast()
+    // }
 }
 
 
